@@ -100,7 +100,6 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f2034",
     alignItems: "center",
   },
   imageContainer: {
@@ -120,8 +119,5 @@ const styles = StyleSheet.create({
   footerContainer: {
     flex: 1 / 3,
     alignItems: "center",
-  },
-  text: {
-    color: "white",
-  },
+  }
 });

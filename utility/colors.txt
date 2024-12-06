@@ -1,0 +1,35 @@
+const color light = {
+
+    <resources>
+    <color name="spark_100">#3399FF</color>
+    <color name="spark_200">#66B2FF</color>
+    <color name="spark_300">#99CCFF</color>
+    <color name="spark_400">#CCEEFF</color>
+    <color name="spark_500">#FFFFCC</color>
+    </resources>
+}
+
+
+dark : 
+--color-primary-a0: #3399ff;
+--color-primary-a10: #5aa4ff;
+--color-primary-a20: #76afff;
+--color-primary-a30: #8dbaff;
+--color-primary-a40: #a2c5ff;
+--color-primary-a50: #b6d0ff;
+
+/** Dark theme surface colors */
+--color-surface-a0: #121212;
+--color-surface-a10: #282828;
+--color-surface-a20: #3f3f3f;
+--color-surface-a30: #575757;
+--color-surface-a40: #717171;
+--color-surface-a50: #8b8b8b;
+
+/** Dark theme mixed surface colors */
+--color-surface-mixed-a0: #1a1e26;
+--color-surface-mixed-a10: #2f333a;
+--color-surface-mixed-a20: #464950;
+--color-surface-mixed-a30: #5d6067;
+--color-surface-mixed-a40: #76797e;
+--color-surface-mixed-a50: #909297;
