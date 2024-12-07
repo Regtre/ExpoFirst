@@ -1,13 +1,13 @@
-import { Theme } from "@react-navigation/native";
 import { Platform } from "react-native";
+import { Theme } from "@react-navigation/native";
 
 const WEB_FONT_STACK =
   'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
-const LightTheme : Theme = {
-  dark: false,
-  colors: {
-    primary: '#CCEEFF',
+  const LightTheme : Theme = {
+    dark: false,
+    colors: {
+    primary: '#4CA6FFFF',
     background: 'white',
     card: '#CCEEFF',
     text: 'black',

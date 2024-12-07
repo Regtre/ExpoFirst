@@ -1,5 +1,6 @@
 import { StyleSheet, View, Pressable, Text } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { useTheme } from "@react-navigation/native";
 
 type Props = {
   label: string;
@@ -8,6 +9,7 @@ type Props = {
 };
 
 export default function Button({ label, theme, action }: Props) {
+  const { colors } = useTheme();
   if (theme === "primary") {
     return (
       <View style={[styles.buttonContainer]}>
@@ -18,7 +20,7 @@ export default function Button({ label, theme, action }: Props) {
           <FontAwesome
             name="picture-o"
             size={18}
-            color="#025a67"
+            color={colors.primary}
             style={styles.buttonIcon}
           />
           <Text style={[styles.buttonLabel, { color: "#25292e" }]}>
@@ -35,7 +37,7 @@ export default function Button({ label, theme, action }: Props) {
         style={styles.button}
         onPress={action}
       >
-        <Text style={styles.buttonLabel}>{label}</Text>
+        <Text style={{ color: colors.text }}>{label}</Text>
       </Pressable>
     </View>
   );
