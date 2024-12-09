@@ -1,11 +1,14 @@
-import { Appearance, StyleSheet, Text, useColorScheme, View } from "react-native";
+import ColorPanel from "@/utility/ColorPanel";
+import { StyleSheet, Text, useColorScheme, View } from "react-native";
 
 export default function About() {
-  const color = useColorScheme()
+  const color = useColorScheme();
+  const theme = ColorPanel.Theme(color === 'dark')
+  
   return (
-    <View style={styles.container}>
-      <Text>About page</Text>
-      <Text>Color is : {color}</Text>
+    <View style={styles.container} >
+      <Text style={{color : theme.text}} >About page</Text>
+      <Text style={{color : theme.text}} >Color is : {color}</Text>
     </View>
   );
 }

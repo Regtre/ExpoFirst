@@ -4,7 +4,7 @@ import LightTheme from "@/utility/LightTheme";
 import { ThemeProvider } from "@react-navigation/native";
 import { Appearance, useColorScheme } from 'react-native';
 import DarkTheme from "@/utility/DarkTheme";
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 
 
 

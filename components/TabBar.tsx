@@ -7,7 +7,7 @@ const TabBar = ({ state, descriptors, navigation }) => {
   const { buildHref } = useLinkBuilder();
 
   return (
-    <View style={styles.tabBar}>
+    <View style={styles(colors).tabBar}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -41,7 +41,7 @@ const TabBar = ({ state, descriptors, navigation }) => {
         return (
           <TouchableOpacity
             key={route.name}
-            style={styles.tabBarItem}
+            style={styles(colors).tabBarItem}
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarButtonTestID}
@@ -58,22 +58,18 @@ const TabBar = ({ state, descriptors, navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = (colors: { primary?: string; background: any; card?: 
+  string; text?: string; border?: string; notification?: string; }) => StyleSheet.create({
   tabBar: {
     position: "absolute",
     bottom: 25,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#99CCFF",
+    backgroundColor: colors.card,
     marginHorizontal: 20,
     paddingVertical: 15,
     borderRadius: 20,
-    borderCurve: 'continuous',
-    shadowColor: 'black',
-    shadowOffset : {width:0, height: 10},
-    shadowRadius: 10,
-    shadowOpacity: 0.1
   },
 
   tabBarItem: {

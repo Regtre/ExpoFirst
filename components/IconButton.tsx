@@ -1,5 +1,7 @@
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, useColorScheme } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { useTheme } from '@react-navigation/native';
+import ColorPanel from '@/utility/ColorPanel';
 
 type Props = {
   icon: keyof typeof MaterialIcons.glyphMap;
@@ -8,10 +10,14 @@ type Props = {
 };
 
 export default function IconButton({ icon, label, onPress }: Props) {
+  const {colors} = useTheme();
+  const color = useColorScheme();
+  const theme = ColorPanel.Theme(color === 'dark')
+
   return (
     <Pressable style={styles.iconButton} onPress={onPress}>
-      <MaterialIcons name={icon} size={24} color="#fff" />
-      <Text style={styles.iconButtonLabel}>{label}</Text>
+      <MaterialIcons name={icon} size={24} color={theme.text}/>
+      <Text style={[styles.iconButtonLabel, {color : theme.text}]}>{label}</Text>
     </Pressable>
   );
 }
@@ -22,7 +28,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   iconButtonLabel: {
-    color: '#fff',
     marginTop: 12,
   },
 });

@@ -1,5 +1,6 @@
 import { Theme } from "@react-navigation/native";
 import { Platform } from "react-native";
+import colorPanel from "./ColorPanel";
 
 const WEB_FONT_STACK =
   'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
@@ -7,12 +8,12 @@ const WEB_FONT_STACK =
 const DarkTheme : Theme = {
   dark: true,
   colors: {
-    primary: '#a2c5ff',
-    background: '#3f3f3f',
-    card: '#121212',
-    text: 'white',
-    border: '#121212',
-    notification: '#8dbaff',
+    primary: colorPanel.color.dark.primary, 
+    background: colorPanel.color.dark.background,
+    card: colorPanel.color.dark.b_a1,
+    text: colorPanel.color.dark.text,
+    border: colorPanel.color.dark.border,
+    notification: colorPanel.color.dark.secondary,
   },
   fonts: Platform.select({
     web: {
